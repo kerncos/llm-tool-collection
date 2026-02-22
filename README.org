@@ -198,6 +198,12 @@ Recursive =grep -E= with line numbers.  Supports an optional /include/ glob for 
 
 Runs an arbitrary Bash command and returns its standard output (errors if exit is nonzero).
 
+*** eval-elisp
++ Author :: @skissue
++ Tags   :: system, execution
+
+Evaluates an arbitrary Emacs Lisp expression in the current Emacs session and returns the printed result.
+
 * Contributing
 :PROPERTIES:
 :CUSTOM_ID: contributing

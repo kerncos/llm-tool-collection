@@ -583,6 +583,14 @@ Signals an error if the command fails (non-zero exit code)."
                                 output))))
          (kill-buffer output-buffer))))))
 
+(llm-tool-collection-deftool eval-elisp
+    (:category "system" :tags (system execution) :confirm t :include t)
+    ((expression "Elisp expression to evaluate, as a string" :type string))
+    "Evaluate an arbitrary Emacs Lisp expression in the current Emacs session.
+Returns the printed representation of the result."
+  (let ((result (eval (car (read-from-string expression)))))
+    (prin1-to-string result)))
+
 (provide 'llm-tool-collection)
 
 ;;; llm-tool-collection.el ends here
