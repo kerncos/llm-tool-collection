@@ -31,7 +31,8 @@
 ;;; Code:
 
 (require 'seq)
-(require 'cl-lib)
+(eval-when-compile
+  (require 'cl-lib))
 
 (defvar llm-tool-collection--all-tools nil
   "A list of all tool definition symbols.")
